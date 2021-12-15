@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: url('https://statics.indozone.id/content/2020/02/19/4WsLXV/t_5e4ce68cba9dd_700.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.kotak{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: maroon;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.kotak .foto{
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.kotak .foto img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid blue;
+}
+.kotak .foto .nama{
+  margin: 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: grey;
+}
+
+.kotak .foto .nama i{
+  color: #00ccff;
+}
+
+.kotak .deskripsi{
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: lightgrey;
+}
+
+.kotak .linktree{
+  width: 100%;
+  padding: 5px;
+}
+
+.kotak .linktree .link{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.kotak .linktree .link i{
+  color: navy;
+}
+.kotak .linktree .link a{
+  text-decoration: none;
+  color: white;
+  margin: 0 5px;
+}
