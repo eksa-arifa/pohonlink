@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: black;
+}
+
+.kotak{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: #d0d0d0;
+  border-radius: 5px;
+  z-index: 9999;
+  transition: all 0.2s;
+  opacity: 0.8;
+}
+
+.kotak.night{
+  background: #292c35;
+  opacity: 1;
+}
+
+.kotak .foto{
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.kotak .foto img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid blue;
+}
+.kotak .foto .nama{
+  margin: 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: grey;
+}
+
+.kotak .foto .nama i{
+  color: #00ccff;
+}
+
+.kotak .deskripsi{
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: maroon;
+}
+
+.kotak .linktree{
+  width: 100%;
+  padding: 5px;
+}
+
+.kotak .linktree .link{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.kotak .linktree .link i{
+  color: navy;
+}
+.kotak .linktree .link a{
+  text-decoration: none;
+  color: crimson;
+  margin: 0 5px;
+}
+
+span{
+  position: absolute;
+  height: 200px;
+  background: linear-gradient(to bottom ,transparent, #fff);
+  border-radius: 0 0 5px 5px;
+  animation: animate 5s linear infinite;
+}
+
+span:nth-child(3n+1){
+  background: linear-gradient(to bottom, transparent, red);
+}
+span:nth-child(3n+2){
+  background: linear-gradient(to bottom, transparent, green);
+}
+span:nth-child(3n+3){
+  background: linear-gradient(to bottom, transparent, yellow);
+}
+
+.kotak .nightmode{
+  display: flex;
+  padding: 5px;
+}
+.kotak .nightmode input{
+  display: none;
+}
+.kotak .nightmode .label{
+  border-radius: 15px;
+  width: 60px;
+  background: black;
+  padding: 5px;
+  position: relative;
+}
+.kotak .nightmode .label .toggle{
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s all;
+}
+.kotak .nightmode input:checked + .label .toggle{
+  transform: translateX(25px);
+}
+@keyframes animate{
+  0%{
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(100vh);
+  }
+}
